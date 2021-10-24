@@ -11,7 +11,7 @@ class Escola extends Model
 
     protected $table = 'escolas';
     protected $fillable =[
-        'id','nome','endereços'
+        'id','nome','endereço'
     ];
     public $timestamps = true;
 }

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Escola;
 use Illuminate\Http\Request;
+use App\Http\Requests\EscolaRequest;
+use Alert;
 
 class EscolaCrudController extends Controller
 {
@@ -14,28 +16,15 @@ class EscolaCrudController extends Controller
      */
     public function index()
     {
-        //
+        return view('escolas.cadastro_escola');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    
+    public function store(EscolaRequest $request)
     {
-        //
-    }
+        $escola = Escola::create($request->all());
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+        return redirect()->route('escolas.index')->with([toast()->success('Instituição de ensino cadastrada com sucesso!')]);
     }
 
     /**
@@ -46,7 +35,9 @@ class EscolaCrudController extends Controller
      */
     public function show(Escola $escola)
     {
-        //
+        $escola = Escola::all();
+
+        return view('escolas.lista_escola', compact('escola'));
     }
 
     /**
@@ -55,9 +46,10 @@ class EscolaCrudController extends Controller
      * @param  \App\Models\Escola  $escola
      * @return \Illuminate\Http\Response
      */
-    public function edit(Escola $escola)
+    public function edit($id)
     {
-        //
+        $escola = Escola::findOrfail($id);
+        return view('escolas.editar_escola',compact('escola'));
     }
 
     /**
@@ -67,9 +59,12 @@ class EscolaCrudController extends Controller
      * @param  \App\Models\Escola  $escola
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Escola $escola)
+    public function update(EscolaRequest $request,$id)
     {
-        //
+        $escola = Escola::findOrfail($id);
+        $escola->update($request->all());
+
+        return redirect()->back()->with([toast()->info('Dados de Instituição alterados com sucesso!')]);
     }
 
     /**
@@ -78,8 +73,11 @@ class EscolaCrudController extends Controller
      * @param  \App\Models\Escola  $escola
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Escola $escola)
+    public function destroy($id)
     {
-        //
+        $escola = Escola::findOrfail($id);
+        $escola->delete();
+
+        return redirect()->back()->with([toast()->info('Cadastro de Instituição excluído!')]);
     }
 }

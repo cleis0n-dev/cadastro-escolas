@@ -7,9 +7,17 @@
 @stop
 
 @section('css')
-
+        <link rel="stylesheet" href="{{ asset('css/datatable.css') }}">
 @stop
 
-@section('js')
 
+@section('js')
+    @include('sweetalert::alert')
+    <script src="{{ asset('js/datatable.js') }}"></script>
+    <script>
+        $(document).ready( function () {
+            $('#dataTable').DataTable();
+        } );
+    </script>
+    
 @stop

@@ -25,7 +25,7 @@ class EscolaRequest extends FormRequest
     {
         return [
             'nome'=>['required','max:255'],
-            'endereco'=>['required','max:255']
+            'endereço'=>['required','max:255']
         ];
     }
 }

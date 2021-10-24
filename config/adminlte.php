@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'Sistema Escola',
+    'title' => 'Sistema Escolar',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -107,7 +107,7 @@ return [
     'classes_auth_body' => '',
     'classes_auth_footer' => '',
     'classes_auth_icon' => '',
-    'classes_auth_btn' => 'btn-flat btn-light',
+    'classes_auth_btn' => 'btn-flat btn-dark',
 
     /*
     |--------------------------------------------------------------------------
@@ -127,9 +127,9 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
+    'classes_sidebar' => 'sidebar-dark-dark elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'navbar-light navbar-light shadow',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -150,7 +150,7 @@ return [
     'sidebar_collapse_auto_size' => false,
     'sidebar_collapse_remember' => false,
     'sidebar_collapse_remember_no_transition' => true,
-    'sidebar_scrollbar_theme' => 'os-theme-light',
+    'sidebar_scrollbar_theme' => 'os-theme-dark',
     'sidebar_scrollbar_auto_hide' => 'l',
     'sidebar_nav_accordion' => true,
     'sidebar_nav_animation_speed' => 300,
@@ -232,16 +232,29 @@ return [
    
         [
             'text'        => 'Home',
-            'url'         => 'admin/pages',
-            'label_color' => 'success',
+            'route'       => 'home',
             'icon'        => 'fas fa-home mx-1'
         ],
         ['header' => 'Gerenciador'],
         [
-            'text' => 'Cadastro de Escola',
-            'url'  => 'admin/settings',
+            'text' => 'Instuição de Ensino',
+            'url' => '/',
             'icon' => 'fas fa-building mx-1',
+            'submenu' => [
+                [
+                    'text' => 'Cadastrar Escola',
+                    'route'  => 'escolas.index',
+                    'icon' => 'mx-3 far fa-building',
+                  
+                ],
+                [
+                    'text' => 'Instituições',
+                    'route' => 'escolas.show',
+                    'icon' => 'mx-3 far fa-building'
+                ]
+            ],
         ],
+        
         [
             'text' => 'Cadastrar Turma',
             'url'  => 'admin/settings',
