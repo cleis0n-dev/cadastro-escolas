@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Sistema Escola',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Sistema</b> Escolar',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -107,7 +107,7 @@ return [
     'classes_auth_body' => '',
     'classes_auth_footer' => '',
     'classes_auth_icon' => '',
-    'classes_auth_btn' => 'btn-flat btn-primary',
+    'classes_auth_btn' => 'btn-flat btn-light',
 
     /*
     |--------------------------------------------------------------------------
@@ -226,97 +226,42 @@ return [
 
     'menu' => [
         // Navbar items:
-        [
-            'type'         => 'navbar-search',
-            'text'         => 'search',
-            'topnav_right' => true,
-        ],
-        [
-            'type'         => 'fullscreen-widget',
-            'topnav_right' => true,
-        ],
 
         // Sidebar items:
+  
+   
         [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
-        [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
-        [
-            'text'        => 'pages',
+            'text'        => 'Home',
             'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
             'label_color' => 'success',
+            'icon'        => 'fas fa-home mx-1'
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'Gerenciador'],
         [
-            'text' => 'profile',
+            'text' => 'Cadastro de Escola',
             'url'  => 'admin/settings',
+            'icon' => 'fas fa-building mx-1',
+        ],
+        [
+            'text' => 'Cadastrar Turma',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-users mx-1',
+        ],
+        [
+            'text' => 'Controle de Alunos',
             'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                'text' => 'Cadastro de Alunos',
+                'icon' => 'fas fa-user-plus mx-1',
+                'url' => '/',
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                'text' => 'Alunos Matriculados',
+                'icon' => 'fas fa-fw fa-book mx-1',
+                'url' => '/',
                 ],
             ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
         ],
     ],
 

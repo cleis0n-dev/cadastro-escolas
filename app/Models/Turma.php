@@ -5,13 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Escola extends Model
+class Turma extends Model
 {
     use HasFactory;
-
-    protected $table = 'escolas';
-    protected $fillable =[
-        'id','nome','endereços'
-    ];
+    protected $table = 'turmas';
+    protected $fillable = ['id','nivel','serie','turno','ano','escola_id'];
     public $timestamps = true;
 }

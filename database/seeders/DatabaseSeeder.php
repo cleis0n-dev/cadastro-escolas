@@ -13,6 +13,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $this->call([
+            EscolaTableSeeder::class,
+            TurmaTableSeeder::class,
+            AlunoTableSeeder::class,
+            AlunoTurmaTableSeeder::class,
+        ]);
         // \App\Models\User::factory(10)->create();
     }
 }
