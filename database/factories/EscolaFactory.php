@@ -23,7 +23,7 @@ class EscolaFactory extends Factory
     {
         return [
             'nome' => $this->faker->name(),
-            'endereço' => $this->faker->text(),
+            'endereço' => $this->faker->address(),
         ];
     }
 }

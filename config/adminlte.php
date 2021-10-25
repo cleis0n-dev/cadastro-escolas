@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Sistema</b> Escolar',
+    'logo' => '<b>Atlas</b> Escolar',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -282,8 +282,8 @@ return [
                     'icon' => 'mx-3 fas fa-users mx-1',
                 ],
                 [
-                    'text' => 'Matricular',
-                    'url' => '/',
+                    'text' => 'Matriculados',
+                    'route' => 'matricula.show',
                     'icon' => 'mx-3 fas fa-chalkboard-teacher',
                 ],
                 

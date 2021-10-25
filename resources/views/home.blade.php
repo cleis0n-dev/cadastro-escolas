@@ -1,13 +1,19 @@
 @extends('adminlte::page')
 
-@section('title', 'Sistema Escolar')
+@section('title', 'Atlas Escolar')
 
 @section('content_header')
-    <h1>Home</h1>
+    <h1>Atlas Escolar</h1>
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+<div class="card">
+    <div class="card-body">
+        <div class="container-fluid">
+            @include('textos.home')
+        </div>
+    </div>
+</div>
 @stop
 
 @section('css')

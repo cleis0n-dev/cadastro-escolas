@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Escola;
+use App\Models\Turma;
 use Illuminate\Http\Request;
 use App\Http\Requests\EscolaRequest;
+use Illuminate\Support\Facades\DB;
 use Alert;
 
 class EscolaCrudController extends Controller
@@ -75,9 +77,16 @@ class EscolaCrudController extends Controller
      */
     public function destroy($id)
     {
-        $escola = Escola::findOrfail($id);
-        $escola->delete();
+        $escola_select = Turma::all()->where('escola_id',$id);
+        if(count($escola_select) > 0){
+            return redirect()->back()->with([toast()->error('Esse registro possui referências')]);
+        }
+        else{
+            $escola = Escola::findOrfail($id);
+            $escola->delete();
 
-        return redirect()->back()->with([toast()->info('Cadastro de Instituição excluído!')]);
+            return redirect()->back()->with([toast()->info('Cadastro de Instituição excluído!')]);
+        }
+        
     }
 }

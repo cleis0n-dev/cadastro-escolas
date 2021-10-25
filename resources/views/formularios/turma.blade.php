@@ -9,7 +9,7 @@
         <div class="col-12 col-sm-6 col-lg-3">
             <label for="nivel">Nível de Ensino: </label>
             <select name="nivel" id="" class="custom-select">
-                <option value="{{ old('nivel') ?? $turma->nivel }}">{{ $turma->nivel }}(Atual)</option>
+                <option value="{{$turma->nivel ?? old('nivel') }}">Escolher</option>
                 <option value="Fundamental">Fundamental</option>
                 <option value="Médio">Médio</option>
             </select>
@@ -21,7 +21,7 @@
         </div>
         <div class="col-12 col-sm-6 col-lg-3">
             <label for="serie">Série:</label>
-            <input type="text" name="serie" value="{{ old('serie') ?? $turma->serie }}" id="" class="form-control">
+            <input type="text" name="serie" value="{{$turma->serie?? old('serie') }}" id="" class="form-control">
             <small class="text-danger">
                 @error('serie')
                     {{ $message }}
@@ -31,6 +31,7 @@
         <div class="col-12 col-sm-6 col-lg-3">
             <label for="turno">Turno:</label>
             <select name="turno" id="" class="custom-select">
+                <option value="{{ $turma->turno ?? old('turno') }}">Escolher</option>
                 <option value="manhã">Manhã</option>
                 <option value="tarde">Tarde</option>
                 <option value="noite">Noite</option>
@@ -43,7 +44,7 @@
         </div>
         <div class="col-12 col-sm-6 col-lg-3">
             <label for="ano">Ano:</label>
-            <input type="text" name="ano" value="{{ old('ano') ?? $turma->ano }}" id="" class="form-control">
+            <input type="text" name="ano" value="{{$turma->ano ?? old('ano') }}" id="" class="form-control">
             <small class="text-danger">
                 @error('ano')
                     {{ $message }}

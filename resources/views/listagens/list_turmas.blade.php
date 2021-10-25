@@ -22,8 +22,32 @@
                             <td>{{ $turma->ano }}</td>
                             <td>
                                 <a href="{{ route('turmas.edit',$turma->id) }}" class="btn btn-secondary btn-sm"><i class="far fa-edit"></i></a>
-                                <a href="{{ route('turmas.delete', $turma->id) }}" class="btn btn-danger btn-sm"><i class="far fa-trash-alt"></i></a>
+                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal{{ $turma->id }}">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                                <a href="{{ route('matricula.create',$turma->id,$turma->escola_id) }}" class="btn btn-primary btn-sm"><i class="fas fa-users"></i></a>
                             </td>
+                            <!-- Modal -->
+                                <div class="modal fade" id="modal{{ $turma->id }}" tabindex="-1" aria-labelledby="{{ $turma->id }}-Label" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="{{ $turma->id }}-Label">{{ $turma->id }} - {{ $turma->serie }}º - turno: {{ $turma->turno }}</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h6><i class="fas fa-exclamation-triangle text-danger mx-1"></i>Todas as referências serão excluídas. Deseja realmente continuar?</h6>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+                                                <a href="{{ route('turmas.delete', $turma->id) }}" class="btn btn-danger">Sim</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!--Modal -->
                         </tr>
                     @endforeach
                 @else
