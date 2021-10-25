@@ -4,82 +4,57 @@ namespace App\Http\Controllers;
 
 use App\Models\Aluno;
 use Illuminate\Http\Request;
+use App\Http\Requests\AlunoRequest;
+use Alert;
 
 class AlunoCrudController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
-        //
+        return view('alunos.cadastro_aluno');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+
+    public function store(AlunoRequest $request)
     {
-        //
+        $aluno = Aluno::create($request->all());
+
+        return redirect()->route('alunos.index')->with([toast()->success('Cadastro de aluno realizado com sucesso!')]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Aluno  $aluno
-     * @return \Illuminate\Http\Response
-     */
     public function show(Aluno $aluno)
     {
-        //
+        $aluno = Aluno::all();
+        
+        return view('alunos.lista_aluno',compact('aluno'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Aluno  $aluno
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Aluno $aluno)
+
+    public function edit($id)
     {
-        //
+        $aluno = Aluno::findOrfail($id);
+
+        return view('alunos.editar_aluno',compact('aluno'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Aluno  $aluno
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Aluno $aluno)
+
+    public function update(AlunoRequest $request, $id)
     {
-        //
+        $aluno = Aluno::findOrfail($id);
+        $aluno->update($request->all());
+
+        return redirect()->back()->with([toast()->info('Cadastro de aluno atualizado com sucesso!')]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Aluno  $aluno
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Aluno $aluno)
+
+    public function destroy($id)
     {
-        //
+        $aluno = Aluno::findOrfail($id);
+
+        $aluno->delete();
+
+        return redirect()->route('alunos.show')->with([toast()->info('Cadastro de Aluno excluído com sucesso!')]);
     }
 }

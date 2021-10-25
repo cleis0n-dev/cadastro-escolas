@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Alert;
 
-class TurmaCrudController extends Api\TurmaController
+class TurmaCrudController extends Controller
 {
     /**
      * Display a listing of the resource.

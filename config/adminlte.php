@@ -254,6 +254,22 @@ return [
                 ]
             ],
         ],
+        [
+            'text' => 'Gerência de Alunos',
+            'icon' => 'fas fa-users-cog mx-1',
+            'submenu' => [
+                [
+                    'text' => 'Cadastrar',
+                    'route' => 'alunos.index',
+                    'icon' => 'mx-3 fas fa-user-edit'
+                ],
+                [
+                    'text' => 'Alunos',
+                    'route' => 'alunos.show',
+                    'icon' => 'mx-3 fas fa-user-friends'
+                ],
+            ],
+        ],
         
         [
             'text' => 'Gerência de Turmas',
@@ -271,22 +287,6 @@ return [
                     'icon' => 'mx-3 fas fa-chalkboard-teacher',
                 ],
                 
-            ],
-        ],
-        [
-            'text' => 'Controle de Alunos',
-            'icon' => 'fas fa-fw fa-user',
-            'submenu' => [
-                [
-                'text' => 'Cadastro de Alunos',
-                'icon' => 'fas fa-user-plus mx-1',
-                'url' => '/',
-                ],
-                [
-                'text' => 'Alunos Matriculados',
-                'icon' => 'fas fa-fw fa-book mx-1',
-                'url' => '/',
-                ],
             ],
         ],
     ],
