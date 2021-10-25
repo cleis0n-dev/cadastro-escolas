@@ -24,10 +24,11 @@ class TurmaRequest extends FormRequest
     public function rules()
     {
         return [
-            'nome'=>['required'],
+
             'nivel'=>['required'],
-            'serie'=>['required'],
+            'serie'=>['bail','required','max:1','min:1'],
             'turno'=>['required'],
+            'ano' =>['bail','required','min:4','max:4'],
             'escola_id'=>'required'
         ];
     }

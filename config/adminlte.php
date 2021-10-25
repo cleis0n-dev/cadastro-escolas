@@ -256,9 +256,22 @@ return [
         ],
         
         [
-            'text' => 'Cadastrar Turma',
-            'url'  => 'admin/settings',
+            'text' => 'Gerência de Turmas',
+            'url'  => '/',
             'icon' => 'fas fa-users mx-1',
+            'submenu' => [
+                [
+                    'text' => 'Turmas',
+                    'route' => 'turmas.show',
+                    'icon' => 'mx-3 fas fa-users mx-1',
+                ],
+                [
+                    'text' => 'Matricular',
+                    'url' => '/',
+                    'icon' => 'mx-3 fas fa-chalkboard-teacher',
+                ],
+                
+            ],
         ],
         [
             'text' => 'Controle de Alunos',

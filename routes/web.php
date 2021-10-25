@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EscolaCrudController;
+use App\Http\Controllers\TurmaCrudController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +28,15 @@ Route::middleware(['auth'])->group(function () {
         Route::get('editar_escola/{id}',    [EscolaCrudController::class,'edit'])->name('edit');
         Route::put('atualizar/{id}',        [EscolaCrudController::class, 'update'])->name('update');
         Route::get('delete/{id}',           [EscolaCrudController::class, 'destroy'])->name('delete');
+    });
+    Route::prefix('turmas')->name('turmas.')->group(function () {
+        Route::get('cadastro',                      [TurmaCrudController::class, 'index'])->name('index');
+        Route::post('store',                        [TurmaCrudController::class, 'store'])->name('store');
+        Route::get('lista_turmas',                  [TurmaCrudController::class, 'show'])->name('show');
+        Route::get('cadastrar/escola={id}',         [TurmaCrudController::class, 'create'])->name('create');
+        Route::get('editar/{id}',                   [TurmaCrudController::class, 'edit'])->name('edit');
+        Route::put('atualizar/{id}',                [TurmaCrudController::class,'update'])->name('update');
+        Route::get('deletar/{id}',                  [TurmaCrudController::class, 'destroy'])->name('delete');
     });
 });
 

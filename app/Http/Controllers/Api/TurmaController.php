@@ -17,7 +17,8 @@ class TurmaController extends Controller
      */
     public function index()
     {
-        return TurmaResource::collection(Turma::all());
+        $turma = Turma::all();
+        return TurmaResource::collection($turma);
     }
 
     /**
@@ -50,9 +51,11 @@ class TurmaController extends Controller
      * @param  \App\Models\Turma  $turma
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Turma $turma)
+    public function update(TurmaRequest $request, Turma $turma)
     {
-        
+        $turma->update($request->all());
+
+        return new TurmaResource($turma);
     }
 
     /**
