@@ -19,6 +19,7 @@
                     <div class="col">
                         <a href="{{ route('escolas.edit',$escola->id) }}" class="btn btn-secondary btn-sm"><i class="far fa-edit"></i></a>
                         <a href="{{ route('turmas.create',$escola->id) }}" class="btn btn-primary btn-sm"><i class="far fa-address-card"></i></a>
+                        <a href="{{ route('escolas.alunos',$escola->id) }}" class="btn btn-info btn-sm"><i class="fas fa-users"></i></a>
                         <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal{{ $escola->id }}">
                             <i class="fas fa-trash-alt"></i>
                         </button>
