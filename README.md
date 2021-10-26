@@ -13,7 +13,7 @@
  <p>http://localhost/api/alunos_turma (Alunos Matrículados)</p>
  
  <h4>Utilizando as APIs, utilizando 'Escolas', como exemplo<h4>
-    <p>Inserindo informações: http://localhost/api/escolas, método 'POST', campos:
+    <p>Inserindo informações: http://localhost/api/escolas, método 'POST', campos:(Nome e Endereço)
     <p>Para acessar todas as informações: http://localhost/api/escolas</p>
     <p>Para procurar por um cadastro específico: http://localhost/api/escolas/{id}</p>  
     <p>Para atualizar um cadastro: http://localhost/api/escolas/{id}, método 'PUT'</p>
