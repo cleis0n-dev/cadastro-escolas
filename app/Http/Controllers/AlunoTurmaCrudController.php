@@ -61,7 +61,7 @@ class AlunoTurmaCrudController extends Controller
             ->join('alunos', 'alunos.id', '=', 'aluno_turmas.id_aluno')
             ->join('turmas', 'turmas.id', '=', 'aluno_turmas.id_turma')
             ->join('escolas', 'escolas.id', '=', 'aluno_turmas.id_escola')
-            ->select('aluno_turmas.*','alunos.nome', 'turmas.serie', 'escolas.nome as escola')
+            ->select('aluno_turmas.*','alunos.nome', 'turmas.*', 'escolas.nome as escola')
             ->get();
 
         return view('matriculas.lista_matricula',compact('matriculas')) ; 
