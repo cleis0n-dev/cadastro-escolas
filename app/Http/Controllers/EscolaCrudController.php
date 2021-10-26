@@ -20,6 +20,17 @@ class EscolaCrudController extends Controller
     {
         return view('escolas.cadastro_escola');
     }
+    
+    public function list_studant(){
+        $matriculas = DB::table('aluno_turmas')
+            ->join('alunos', 'alunos.id', '=', 'aluno_turmas.id_aluno')
+            ->join('turmas', 'turmas.id', '=', 'aluno_turmas.id_turma')
+            ->join('escolas', 'escolas.id', '=', 'aluno_turmas.id_escola')
+            ->select('aluno_turmas.*','alunos.nome', 'turmas.*', 'escolas.nome as escola')
+            ->get();
+
+        return view('escolas.escola_alunos',compact('matriculas')) ; 
+    }
 
     
     public function store(EscolaRequest $request)
