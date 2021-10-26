@@ -42,7 +42,7 @@
 
  <h4>Realize o seu cadastro para acessar o sistema e logo na tela inicial terá um tutorial explicando de forma simplificada como utilizar o sistema.</h4>
 
-     <h4>Utilizar o comando <code>php artisan db:seed</code>, no terminal caso precise de alguns registros previamente cadastrados</code></h4>
+     <h4>Utilizar o comando "php artisan db:seed", no terminal caso precise de alguns registros previamente cadastrados</code></h4>
  
  
  
