@@ -5,7 +5,7 @@
                 <th>ID</th>
                 <th>Instituição de ensino</th>
                 <th>Nível</th>
-                <th>Sério</th>
+                <th>Série</th>
                 <th>Turno</th>
                 <th>Ano</th>
                 <th>Editar/Excluir</th>
