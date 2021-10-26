@@ -38,7 +38,8 @@
     <p>Para atualizar um cadastro: http://localhost/api/escolas/{id}, método 'PUT'</p>
     <p>Para excluir um registro: http://localhost/api/escolas/{id}, método 'DELETE'<p> 
     
-    ![image](https://user-images.githubusercontent.com/89282274/138789964-4ab8e1a8-35c6-416f-af1e-ce4c218c1533.png)
+    ![API](https://user-images.githubusercontent.com/89282274/138790352-1142b00a-f747-453f-8ef8-b29b2b5a6100.PNG)
+
 
  
  
