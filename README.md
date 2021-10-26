@@ -26,10 +26,10 @@
  <h4>Realize o seu cadastro para acessar o sistema e logo na tela inicial terá um tutorial explicando de forma simplificada como utilizar o sistema.</h4>
  
  <h4>O sistema também conta com um endpoint API, no qual você poderá está utilizando também.</h4>
- <p>http://127.0.0.1:8000/api/escolas</p>
- <p>http://127.0.0.1:8000/api/alunos</p>
- <p>http://127.0.0.1:8000/api/turmas</p>
- <p>http://127.0.0.1:8000/api/alunos_turma(Alunos Matrículados)</p>
+ <p>http://localhost/api/escolas</p>
+ <p>http://localhost/api/alunos</p>
+ <p>http://localhost/api/turmas</p>
+ <p>http://localhost/api/alunos_turma (Alunos Matrículados)</p>
  
  <h4>Utilizando as APIs, utilizando 'Escolas', como exemplo<h4>
     <p>Inserindo informações: http://localhost/api/escolas, método 'POST', campos:
