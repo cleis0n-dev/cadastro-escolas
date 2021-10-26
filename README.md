@@ -6,7 +6,7 @@
 
 ![Turmas](https://user-images.githubusercontent.com/89282274/138792500-d0769257-a67b-4c12-82fb-7eafa662e3b5.PNG)
 
-<h4>O sistema também conta com um endpoints API.
+<h4>O sistema também conta com endpoints API.
  <p>http://localhost/api/escolas</p>
  <p>http://localhost/api/alunos</p>
  <p>http://localhost/api/turmas</p>
