@@ -33,6 +33,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('editar_escola/{id}',    [EscolaCrudController::class,'edit'])->name('edit');
         Route::put('atualizar/{id}',        [EscolaCrudController::class, 'update'])->name('update');
         Route::get('delete/{id}',           [EscolaCrudController::class, 'destroy'])->name('delete');
+        Route::get('lista_aluno',           [EscolaCrudController::class, 'list_studant'])->name('alunos');
     });
     // Cadastro de Turmas Escolares
     Route::prefix('turmas')->name('turmas.')->group(function () {
