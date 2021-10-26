@@ -251,6 +251,11 @@ return [
                     'text' => 'Instituições',
                     'route' => 'escolas.show',
                     'icon' => 'mx-3 far fa-building'
+                ],
+                [
+                    'text' => 'Matriculados',
+                    'route' => 'escolas.alunos',
+                    'icon' => 'mx-3 far fa-building'
                 ]
             ],
         ],
