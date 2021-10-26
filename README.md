@@ -4,7 +4,7 @@
 
 <h4>É uma CRUD para gerenciamento de instituições de ensino. Atlas Escolar foi desenvolvido para organizar e flexibilizar o controle de cadastro de instituições de ensino e Estudantes.</h4>
 
-<h4>O sistema também conta com um endpoint API, no qual você poderá está utilizando também.</h4>
+<h4>O sistema também conta com um endpoints API.
  <p>http://localhost/api/escolas</p>
  <p>http://localhost/api/alunos</p>
  <p>http://localhost/api/turmas</p>
