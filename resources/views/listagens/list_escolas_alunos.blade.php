@@ -9,7 +9,7 @@
             </tr>
         </thead>
         <tbody>
-            @if ($matriculas)
+            @if (count($matriculas) >= 1)
                 @foreach ($matriculas as $matricula )
                 <tr>
                     <td>{{ $matricula->id }}</td>
