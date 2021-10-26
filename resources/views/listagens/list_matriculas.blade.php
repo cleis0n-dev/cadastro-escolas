@@ -14,7 +14,7 @@
                 <tr>
                     <td>{{ $matricula->nome }}</td>
                     <td>{{ $matricula->escola }}</td>
-                    <td>{{ $matricula->serie }}</td>
+                    <td>{{ $matricula->serie }}º {{ $matricula->nivel }} {{ $matricula->turno }}</td>
                     <td>
                         <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal{{ $matricula->id }}">
                             <i class="fas fa-trash-alt"></i>

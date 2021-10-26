@@ -251,7 +251,13 @@ return [
                     'text' => 'Instituições',
                     'route' => 'escolas.show',
                     'icon' => 'mx-3 far fa-building'
+                ],
+                [
+                    'text' => 'Matriculados',
+                    'route' => 'escolas.alunos',
+                    'icon' => 'mx-3 far fa-building'
                 ]
+                
             ],
         ],
         [
@@ -282,7 +288,7 @@ return [
                     'icon' => 'mx-3 fas fa-users mx-1',
                 ],
                 [
-                    'text' => 'Matriculados',
+                    'text' => 'Consultar Matricula',
                     'route' => 'matricula.show',
                     'icon' => 'mx-3 fas fa-chalkboard-teacher',
                 ],
