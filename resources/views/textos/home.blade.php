@@ -8,7 +8,7 @@
 <p>
     Primeiramente deverá cadastrar uma <b><a href="{{ route('escolas.index') }}" class="text-dark">instituição de ensino</a></b>. Todos os cadastros partem dela.
     Após cadastrar a nova instituição de ensino, será possível cadastrar uma turma, sendo fundamental 
-    ou médio, e o turno.Basta acessar a lista de instituições registradas e clicar no ícone “azul”. Você será redirecionado a um formulário para cadastrar um novo tipo de turma.
+    ou médio, e o turno. Basta acessar a lista de instituições registradas e clicar no ícone “azul”. Você será redirecionado a um formulário para cadastrar um novo tipo de turma.
 </p>
 <p>
     Tendo feito o cadastro de uma turma, hora de cadastrar os <b><a href="{{ route('alunos.index') }}" class="text-dark">estudantes</a></b>. Esses seriam estudantes registrados no sistema para serem vinculados posteriormente a 
