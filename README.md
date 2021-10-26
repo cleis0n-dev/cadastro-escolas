@@ -1,3 +1,9 @@
+<h1>Atlas Escolar</h1>
+
+<h3>Sobre o sistema</h3>
+
+<h4>É uma CRUD para gerenciamento de instituições de ensino. Atlas Escolar foi desenvolvido para organizar e flexibilizar o controle de cadastro de instituições de ensino e Estudantes.</h4>
+
 <h4>Inicializando o projeto</h4>
 
 <p>
