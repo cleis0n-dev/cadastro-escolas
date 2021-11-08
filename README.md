@@ -36,15 +36,15 @@
  <h4>
     Após clonar o repositório, acesse o diretório do projeto, crie uma base de dados "controle-escolas" e utilize os seguintes comandos:
 </h4>
-<p>- <code>composer update</code></p>
-<p>- <code>npm install</code></p>
-<p>- <code>php artisan migrate</code></p>
+<p> <code>composer update</code></p>
+<p> <code>npm install</code></p>
+<p> <code>php artisan migrate</code></p>
 
  <h4>Realize o seu cadastro para acessar o sistema e logo na tela inicial terá um tutorial explicando de forma simplificada como utilizar o sistema.</h4>
 
  <p>Para obter uma demonstração dos dados devidamente cadastrados: </p>
      
-     <h4>php artisan db:seed</h4>
+     <p>    <code>php artisan db:seed</code>    </p>
  
  
  
