@@ -40,11 +40,11 @@
 <p> <code>npm install</code></p>
 <p> <code>php artisan migrate</code></p>
 
- <h4>Realize o seu cadastro para acessar o sistema e logo na tela inicial terá um tutorial explicando de forma simplificada como utilizar o sistema.</h4>
+ <h4>Realize o seu cadastro para acessar o sistema e logo na tela inicial terá um tutorial explicando de forma simplificada como utilizar o sistema</h4>
 
- <p>Para obter uma demonstração dos dados devidamente cadastrados: </p>
+ <p>Para obter uma demonstração dos dados devidamente cadastrados:</p>
      
-     <p>    <code>php artisan db:seed</code>    </p>
+     <p> <code>php artisan db:seed</code></p>
  
  
  
