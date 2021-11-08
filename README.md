@@ -44,7 +44,7 @@
 
  <p>Para obter uma demonstração dos dados devidamente cadastrados: </p>
      
-  php artisan db:seed
+     <h4>php artisan db:seed</h4>
  
  
  
